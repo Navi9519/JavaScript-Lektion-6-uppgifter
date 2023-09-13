@@ -21,8 +21,12 @@ document.querySelector(".myBtn").addEventListener("click", marabouIsBest);
 
 function showUserName() {
   var name = prompt("Write me your name");
-
-  document.querySelector(".text").innerHTML = "ditt namn är " + name;
+  if (name !== null) {
+    document.querySelector(".text").innerHTML = "ditt namn är " + name;
+  } else {
+    console.log(name);
+    return false;
+  }
 
   console.log(name);
 }
